@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Photo Gallery</title>
+    <!-- Kết nối đến file CSS -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <!-- Khung hiển thị ảnh lớn ban đầu -->
+    <div id="image">
+        Hover over an image below to display here.
+    </div>
+
+        <!-- Khu vực chứa 3 ảnh nhỏ (Thumbnails) -->
+    <div class="preview-container">
+        <img class="preview" 
+             src="anh1.jpg" 
+             alt="Cảnh núi non hùng vĩ" 
+             onmouseover="upDate(this)" 
+             onmouseout="undo()">
+
+        <img class="preview" 
+             src="anh2.jpg" 
+             alt="Cánh đồng sương mù buổi sớm" 
+             onmouseover="upDate(this)" 
+             onmouseout="undo()">
+
+        <img class="preview" 
+             src="anh3.jpg" 
+             alt="Con đường xuyên qua khu rừng" 
+             onmouseover="upDate(this)" 
+             onmouseout="undo()">
+    </div>
+
+
+    <!-- Kết nối đến file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
