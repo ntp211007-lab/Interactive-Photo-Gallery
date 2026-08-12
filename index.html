@@ -1,41 +1,51 @@
-<!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Interactive Photo Gallery</title>
-    <!-- Kết nối đến file CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Interactive Photo Gallery</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
-<body>
+<!-- Bước 8: Gọi hàm addTabFocusAttribute ngay khi trang web vừa tải xong -->
+<body onload="addTabFocusAttribute()">
 
-    <!-- Khung hiển thị ảnh lớn ban đầu -->
+    <!-- Khung hiển thị lớn -->
     <div id="image">
         Hover over an image below to display here.
     </div>
 
-        <!-- Khu vực chứa 3 ảnh nhỏ (Thumbnails) -->
+    <!-- Bước 2 & 6: Khu vực chứa 6 bức ảnh nhỏ hỗ trợ cả chuột lẫn phím Tab -->
     <div class="preview-container">
         <img class="preview" 
-             src="anh1.jpg" 
-             alt="Cảnh núi non hùng vĩ" 
-             onmouseover="upDate(this)" 
-             onmouseout="undo()">
+             src="anh1.jpg" alt="Cảnh núi non hùng vĩ" 
+             onmouseover="upDate(this)" onmouseout="undo()"
+             onfocus="upDate(this)" onblur="undo()">
 
         <img class="preview" 
-             src="anh2.jpg" 
-             alt="Cánh đồng sương mù buổi sớm" 
-             onmouseover="upDate(this)" 
-             onmouseout="undo()">
+             src="anh2.jpg" alt="Cánh đồng sương mù buổi sớm" 
+             onmouseover="upDate(this)" onmouseout="undo()"
+             onfocus="upDate(this)" onblur="undo()">
 
         <img class="preview" 
-             src="anh3.jpg" 
-             alt="Con đường xuyên qua khu rừng" 
-             onmouseover="upDate(this)" 
-             onmouseout="undo()">
+             src="anh3.jpg" alt="Con đường xuyên qua khu rừng" 
+             onmouseover="upDate(this)" onmouseout="undo()"
+             onfocus="upDate(this)" onblur="undo()">
+
+        <img class="preview" 
+             src="anh4.jpg" alt="Dòng suối chảy qua đá cuội" 
+             onmouseover="upDate(this)" onmouseout="undo()"
+             onfocus="upDate(this)" onblur="undo()">
+
+        <img class="preview" 
+             src="anh5.jpg" alt="Cánh đồng cỏ xanh mướt" 
+             onmouseover="upDate(this)" onmouseout="undo()"
+             onfocus="upDate(this)" onblur="undo()">
+
+        <img class="preview" 
+             src="anh6.jpg" alt="Bầu trời hoàng hôn trên biển" 
+             onmouseover="upDate(this)" onmouseout="undo()"
+             onfocus="upDate(this)" onblur="undo()">
     </div>
 
-
-    <!-- Kết nối đến file JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
